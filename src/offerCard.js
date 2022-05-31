@@ -1,40 +1,31 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 import('./App.css');
 
-export default function TCard(props) {
+export default function OfferCard() {
   return (
-    <Card className={`base-class ${!props.usd_to_lbp ? 'card-buy' : 'card-sell'}`} 
-    sx={{ minWidth: 275, maxWidth: 345, maxHeight: 300 }}>
-      <CardContent className="card-content">
-        {props.usd_to_lbp === false && props.id != null &&
-          <Typography sx={{ fontSize: 20 }} color="black" gutterBottom>Buying</Typography>
-        }
-        {props.usd_to_lbp === true &&
-          <Typography sx={{ fontSize: 20 }} color="black" gutterBottom>Selling</Typography>
-        }
-        <div className="row-card">
-          <Typography >USD Amount:</Typography>
-          <Typography >{props.USDamount}</Typography>
-        </div>
-        <div className="row-card">
-          <Typography >Rate:</Typography>
-          <Typography >{props.rate}</Typography>
-        </div>
-        <div className="row-card">
-          <Typography >Date:</Typography>
-          <Typography >{props.date}</Typography>
-        </div>
-        <div className="row-card">
-        <Typography>Phone:</Typography>
-          <Typography >{props.phone}</Typography>
-        </div>
-      </CardContent>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image="/static/images/cards/contemplative-reptile.jpg"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

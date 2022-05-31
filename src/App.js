@@ -1,29 +1,37 @@
 import './App.css';
 import { AppBar, Toolbar, Button } from '@mui/material';
+import OfferCard from './offerCard';
+
+import img from "./abuYoussefLogo.jpg";
 
 function App() {
 
 
   return (
     <div className="App">
-          <AppBar position="static">
-            <Toolbar classes={{ root: "nav" }}>
-              <div>
-                <Button variant="outlined" > 3assir</Button>
-              </div>
-            </Toolbar>
-          </AppBar>
+      <AppBar position="static">
+        <Toolbar classes={{ root: "nav" }}>
           <div>
-          <Repeat numTimes={listBuyOffers.length}>
-              {(index) => <TCard className="card-type" USDamount={listBuyOffers[index].usd_amount}
-                rate={listBuyOffers[index].rate}
-                date={listBuyOffers[index].added_date.substring(0, 10)}
-                usd_to_lbp={listBuyOffers[index].usd_to_lbp}
-                phone={listBuyOffers[index].phone}
-                id={listBuyOffers[index].id}
-              ></TCard>}
-            </Repeat>
+            <Button variant="outlined" > 3assir</Button>
           </div>
+        </Toolbar>
+      </AppBar>
+      <div className='main-page'>
+        {/* <OfferCard></OfferCard> */}
+        <div className='logo'>
+      <img src={img}></img>
+        </div>
+        <div className='cube-container'>
+        <div className="slider">
+          <div  className="container">
+            <div  className="slide x"></div>
+            <div  className="slide y"></div>
+            <div  className="slide z"></div>
+          </div>
+          <div  className="shadow"></div>
+        </div>
+        </div>
+      </div>
     </div>
   );
 }
