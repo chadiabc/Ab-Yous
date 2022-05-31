@@ -1,0 +1,36 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+#root {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  --primary-clr: #FFFFFF;
+  --graph-btns-clr: #944f96;
+  --graph-btns-disabled: hsl(300, 32%, 23%);
+  --primary-clr-textbox: #944f96;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: palegoldenrod;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--primary-clr);
+}
